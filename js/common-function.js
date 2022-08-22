@@ -1,3 +1,26 @@
+function checkPlayerListById(elementId) {
+    let playerList = document.getElementById(elementId);
+    let list = playerList.children;
+
+    return list.length;
+}
+
+function setPlayerInListById(elementId, newValue) {
+    const getPlayer = document.getElementById(elementId);
+    const li = document.createElement('li');
+    li.innerText = newValue;
+    getPlayer.appendChild(li);
+
+    return getPlayer;
+}
+
+function getTextPlayerTitleById(elementId) {
+    const playerTitleText = document.getElementById(elementId);
+    const playerTitleTextString = playerTitleText.innerText;
+
+    return playerTitleTextString;
+}
+
 
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
@@ -23,21 +46,3 @@ function setTextElementValueById(elementId, newValue) {
 
 }
 
-document.getElementById('btn-calculate-player-cost').addEventListener('click', function () {
-    const currentPlayerExpense = getInputFieldValueById('per-player-cost');
-
-    const newPlayerrExpenses = (currentPlayerExpense) * 5;
-
-    setTextElementValueById('player-expenses-total', newPlayerrExpenses);
-})
-
-document.getElementById('btn-calculate-total').addEventListener('click', function () {
-
-    const playerExpenseTotal = getTextElementValueById('player-expenses-total');
-    const managerCost = getInputFieldValueById('manager-cost');
-    const coachCost = getInputFieldValueById('coach-cost');
-
-    const costTotal = playerExpenseTotal + managerCost + coachCost;
-
-    setTextElementValueById('cost-total', costTotal);
-})
