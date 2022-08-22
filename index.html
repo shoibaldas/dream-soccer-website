@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="images/Ball-in-net.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-[#202124]">
     <!-- Top-Cover-Section-Start-Here -->
     <header class="bg-cover w-full relative flex items-center justify-center text-center h-96"
         style="background-color: black;">
@@ -118,11 +118,14 @@
             <div class="w-1/5">
                 <div class="grid gap-y-10">
                     <div class="w-full h-80 bg-black rounded overflow-hidden shadow-lg">
-                        <div class="flex flex-col items-center">
-                            <h2 class="manrope-font-800 mt-4 mb-2 text-center">Selected-V</h2>
+                        <div class="manrope-font-800 flex flex-col items-center">
+                            <h2 class="mt-4 mb-2 text-center">Selected-V</h2>
                             <img class="w-2/3" src="images/Ureg-Ureg Marker.png" alt="">
+                            <ol id="player-list">
 
+                            </ol>
                         </div>
+
                     </div>
                     <!-- Best Five Player Display End Here-->
 
@@ -136,29 +139,30 @@
                             <div class="mb-4 mt-6 flex flex-row justify-between">
                                 <h5 class="manrope-font-400">Per Player</h5>
                                 <input class="w-2/5 bg-black text-white border border-gray-400" type="text" name=""
-                                    id="" placeholder="$">
+                                    id="per-player-cost" placeholder="$">
                             </div>
-                            <button class="manrope-font-700 bg-sky-800 px-20 py-2 mb-4 text-center">Calculate</button>
+                            <button id="btn-calculate-player-cost"
+                                class="manrope-font-700 bg-sky-800 px-20 py-2 mb-4 text-center">Calculate</button>
                             <div class="mb-4 flex flex-row">
                                 <h5 class="manrope-font-400">Player Expenses</h5>
-                                <h5 class="manrope-font-400 mx-8">$<span>00</span></h5>
+                                <h5 class="manrope-font-400 mx-8">$<span id="player-expenses-total">00</span></h5>
                             </div>
                             <div class="mb-4 flex flex-row justify-between">
                                 <h5 class="manrope-font-400">Manager</h5>
                                 <input class="w-2/5 bg-black text-white border border-gray-400" type="text" name=""
-                                    id="" placeholder="$">
+                                    id="manager-cost" placeholder="$">
                             </div>
                             <div class="mb-4 flex flex-row justify-between">
                                 <h5 class="manrope-font-400">Coach</h5>
                                 <input class="w-2/5 bg-black text-white border border-gray-400" type="text" name=""
-                                    id="" placeholder="$">
+                                    id="coach-cost" placeholder="$">
                             </div>
-                            <button
+                            <button id="btn-calculate-total"
                                 class="manrope-font-700 bg-sky-800 px-16 py-2 mb-4 text-center whitespace-nowrap">Calculate
                                 Total</button>
                             <div class="mb-4 flex flex-row">
                                 <h5 class="manrope-font-400">Total</h5>
-                                <h5 class="manrope-font-400 mx-28 text-orange-600">$<span>00</span></h5>
+                                <h5 class="manrope-font-400 mx-28 text-orange-600">$<span id="cost-total">00</span></h5>
                             </div>
                         </div>
                     </div>
@@ -167,6 +171,8 @@
             </div>
         </section>
     </main>
+    <script src="js/common-function.js"></script>
+    <script src="js/app-event.js"></script>
 </body>
 <!-- Footer-Start-Here -->
 <footer class="flex flex-col items-center border-t-2 border-gray-500 mt-24">
